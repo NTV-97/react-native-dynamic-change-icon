@@ -12,11 +12,16 @@ import java.util.Collections;
 import java.util.List;
 
 public class DynamicChangeIconPackage implements ReactPackage {
+   private String packageName;
+
+    public DynamicChangeIconPackage(String packageName) {
+        this.packageName = packageName;
+    }
   @NonNull
   @Override
   public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new DynamicChangeIconModule(reactContext));
+    modules.add(new DynamicChangeIconModule(reactContext, this.packageName));
     return modules;
   }
 

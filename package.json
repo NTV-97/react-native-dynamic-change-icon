@@ -1,12 +1,13 @@
 {
   "name": "react-native-dynamic-change-icon",
-  "version": "0.1.0",
-  "description": "test",
-  "main": "lib/commonjs/index",
+  "title": "React Native Dynamic Change Icon",
+  "version": "0.0.1",
+  "description": "Change application icon programmatically in React-Native.",
+  "main": "index",
   "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index",
-  "source": "src/index",
+  "types": "types/index.d.ts",
+  "react-native": "index",
+  "source": "index",
   "files": [
     "src",
     "lib",
@@ -21,10 +22,11 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
-    "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
-    "!**/.*"
+    "!**/.*",
+    "react-native.config.js",
+    "README.md"
   ],
   "scripts": {
     "test": "jest",
@@ -42,7 +44,7 @@
     "android"
   ],
   "repository": "https://github.com/NTV-97/react-native-dynamic-change-icon",
-  "author": "Thanh Vinh Nguyen <thanhvinh.developer@gmail.com> <thanhvinh.developer@gmail.com> (https://github.com/NTV-97/react-native-dynamic-change-icon)",
+  "author": "Thanh Vinh Nguyen <thanhvinh.developer@gmail.com> (https://github.com/NTV-97/react-native-dynamic-change-icon)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NTV-97/react-native-dynamic-change-icon/issues"

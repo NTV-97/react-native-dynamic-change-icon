@@ -12,9 +12,10 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "11.0" }
-  s.source       = { :git => "https://github.com/NTV-97/react-native-dynamic-change-icon.git", :tag => "#{s.version}" }
-
-  s.source_files = "ios/**/*.{h,m,mm}"
+  s.source       = { :git => "#{package["repository"]}.git", :tag => "#{s.version}" }
+  s.source_files = "ios/**/*.{h,m,mm,swift}"
+  
+  s.requires_arc = true
 
   s.dependency "React-Core"
 

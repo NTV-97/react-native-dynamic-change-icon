@@ -1,19 +1,15 @@
-#import "DynamicChangeIcon.h"
+#import <Foundation/Foundation.h>
+#import "React/RCTBridgeModule.h"
 
-@implementation DynamicChangeIcon
-RCT_EXPORT_MODULE()
-
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(double)a withB:(double)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-{
-    NSNumber *result = @(a * b);
-
-    resolve(result);
-}
+@interface RCT_EXTERN_MODULE(DynamicChangeIcon, NSObject)
+RCT_EXTERN_METHOD(getIcon: (RCTPromiseResolveBlock) resolve
+                  rejecter: (RCTPromiseRejectBlock) reject
+                  )
+RCT_EXTERN_METHOD(changeIcon:
+                    (NSString *) iconName
+                    resolver: (RCTPromiseResolveBlock) resolve
+                    rejecter: (RCTPromiseRejectBlock) reject
+                  )
 
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
